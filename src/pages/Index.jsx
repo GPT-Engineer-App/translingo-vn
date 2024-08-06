@@ -99,7 +99,11 @@ const Index = () => {
           </div>
 
           <div className="space-y-4">
-            <div className="border rounded-lg p-4 h-96 overflow-y-auto">
+            <div className="border rounded-lg p-4 mb-4 bg-blue-50">
+              <h3 className="font-semibold text-lg mb-2">Chào mừng bạn đến với Công Cụ Dịch Tài Liệu Tiếng Việt!</h3>
+              <p>Đây là trợ lý AI của bạn. Hãy đặt câu hỏi về quá trình dịch thuật hoặc yêu cầu giải thích bất kỳ điều gì bạn chưa rõ.</p>
+            </div>
+            <div className="border rounded-lg p-4 h-80 overflow-y-auto">
               {chatMessages.map((message, index) => (
                 <div key={index} className={`mb-2 ${message.role === 'user' ? 'text-right' : 'text-left'}`}>
                   <span className={`inline-block p-2 rounded-lg ${message.role === 'user' ? 'bg-blue-100' : 'bg-gray-100'}`}>
