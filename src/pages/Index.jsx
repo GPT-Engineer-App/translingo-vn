@@ -6,6 +6,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { Send, Upload, FileText, Download } from 'lucide-react';
 import { useQuery } from '@tanstack/react-query';
 import OpenAI from 'openai';
+import { Link } from 'react-router-dom';
 
 const openai = new OpenAI({
   apiKey: 'your-api-key-here', // Thay thế bằng API key của bạn
@@ -59,6 +60,15 @@ const Index = () => {
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
       <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-4xl">
         <h1 className="text-3xl font-bold mb-6 text-center">Công Cụ Dịch Tài Liệu Tiếng Việt</h1>
+        
+        <div className="flex justify-center space-x-4 mb-6">
+          <Link to="/guide">
+            <Button variant="outline">Hướng dẫn sử dụng</Button>
+          </Link>
+          <Link to="/about">
+            <Button variant="outline">Về chúng tôi</Button>
+          </Link>
+        </div>
         
         <div className="grid grid-cols-2 gap-8">
           <div className="space-y-4">
